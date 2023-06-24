@@ -56,4 +56,21 @@ M.nvimtree = {
   },
 }
 
+M.nvterm = function()
+  require("nvterm").setup {
+    terminals = {
+      shell = "pwsh.exe",
+      type_opts = {
+        float = {
+          relative = "editor",
+          row = 0,
+          col = 0,
+          width = 1,
+          height = 0.9,
+        },
+      },
+    },
+  }
+end
+
 return M

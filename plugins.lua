@@ -1,4 +1,4 @@
-local overrides = require("custom.configs.overrides")
+local overrides = require "custom.configs.overrides"
 
 ---@type NvPluginSpec[]
 local plugins = {
@@ -23,12 +23,12 @@ local plugins = {
   },
   {
     "sbdchd/neoformat",
-    cmd = {"Neoformat"}
+    cmd = { "Neoformat" },
   },
   -- override plugin configs
   {
     "williamboman/mason.nvim",
-    opts = overrides.mason
+    opts = overrides.mason,
   },
 
   {
@@ -39,6 +39,10 @@ local plugins = {
   {
     "nvim-tree/nvim-tree.lua",
     opts = overrides.nvimtree,
+  },
+  {
+    "NvChad/nvterm",
+    config = overrides.nvterm,
   },
 
   -- Install a plugin

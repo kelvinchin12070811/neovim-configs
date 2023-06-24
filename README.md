@@ -10,3 +10,8 @@ to the official docs for more info.
 
 Next, clone this repo into the custom folder of the Neovim configs dir and restart Neovim and install required
 plugins if need.
+
+## Neovim Example Config
+
+This configurations is based on the [Official Example_config](https://github.com/NvChad/example_config) by the
+NvChad team, and slightly moddified.

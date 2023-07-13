@@ -5,7 +5,7 @@ recreate the environment of Neovim instantlay.
 
 ## Usage
 
-Before use, [Neovim](https://neovim.io) and [NvChad](https://nvchad.com) are required to be installed. Refer
+Before use, [Neovim](https://neovim.io) and [LazyVim](https://www.lazyvim.org) are required to be installed. Refer
 to the official docs for more info.
 
 Next, clone this repo into the custom folder of the Neovim configs dir and restart Neovim and install required

@@ -11,4 +11,3 @@ vim.opt.softtabstop = 4
 vim.opt.expandtab = true
 vim.opt.colorcolumn = "110"
 vim.opt.visualbell = true
-vim.opt.clipboard = nil

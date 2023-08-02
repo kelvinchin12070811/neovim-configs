@@ -2,8 +2,8 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 
-vim.api.nvim_set_keymap("n", "<leader>s", "i<CR><Esc>", { noremap = true, desc = "Split line infront of cursor" })
-vim.api.nvim_set_keymap("n", "<leader>S", "a<CR><Esc>", { noremap = true, desc = "Split lien behind of cursor" })
+vim.api.nvim_set_keymap("n", "<leader>sl", "i<CR><Esc>", { noremap = true, desc = "Split line infront of cursor" })
+vim.api.nvim_set_keymap("n", "<leader>sL", "a<CR><Esc>", { noremap = true, desc = "Split lien behind of cursor" })
 
 for _, mode_char in pairs({ "n", "v" }) do
   for _, op_char in pairs({ "c", "d", "x" }) do

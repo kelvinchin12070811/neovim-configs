@@ -7,8 +7,25 @@ local map = vim.keymap.set
 map("n", ";", ":", { desc = "CMD enter command mode" })
 map("i", "jk", "<ESC>")
 
+vim.cmd("map  <Leader><Leader>f <Plug>(easymotion-bd-f)")
+vim.cmd("map <Leader><Leader>l <Plug>(easymotion-lineforward)")
+vim.cmd("map <Leader><Leader>j <Plug>(easymotion-j)")
+vim.cmd("map <Leader><Leader>k <Plug>(easymotion-k)")
+vim.cmd("map <Leader><Leader>h <Plug>(easymotion-linebackward)")
+vim.cmd("nmap <Leader><Leader>s <Plug>(easymotion-s2)")
+vim.cmd("nmap <Leader><Leader>t <Plug>(easymotion-t2)")
+vim.cmd("map  <Leader><Leader>/ <Plug>(easymotion-sn)")
+vim.cmd("omap <Leader><Leader>/ <Plug>(easymotion-tn)")
+
+map("n", "<leader>b", "", { desc = "buffer op" })
+map("n", "<leader>bn", "<cmd>enew<CR>", { desc = "buffer new" })
+map("n", "<leader>bd", function()
+  require("nvchad.tabufline").close_buffer()
+end, { desc = "buffer close" })
+
 vim.api.nvim_set_keymap("n", "<leader>sl", "i<CR><Esc>", { noremap = true, desc = "Split line infront of cursor" })
 vim.api.nvim_set_keymap("n", "<leader>sL", "a<CR><Esc>", { noremap = true, desc = "Split lien behind of cursor" })
+vim.api.nvim_set_keymap("n", "gV", "<c-v>", { noremap = true, desc = "Block visual mode" })
 
 for _, mode_char in pairs({ "n", "v" }) do
   for _, op_char in pairs({ "c", "d", "x" }) do
@@ -38,4 +55,5 @@ for _, mode_char in pairs({ "n", "v" }) do
   end
 end
 
+-- Show commander and select the command by pressing "<leader>fc"
 -- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")

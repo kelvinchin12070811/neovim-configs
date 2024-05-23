@@ -40,3 +40,17 @@ end)
 
 vim.opt.number = true
 vim.opt.relativenumber = true
+
+-- Custom commands
+function SetIndent(value)
+    vim.bo.shiftwidth = tonumber(value)
+    vim.bo.tabstop = tonumber(value)
+end
+
+function ShowIndent()
+    print('shiftwidth=' .. vim.bo.shiftwidth .. ' tabstop=' .. vim.bo.tabstop)
+end
+
+vim.cmd('command! -nargs=1 SetIndent lua SetIndent(<f-args>)')
+vim.cmd('command! ShowIndent lua ShowIndent()')
+

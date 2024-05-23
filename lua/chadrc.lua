@@ -10,6 +10,15 @@ M.ui = {
   nvdash = {
     load_on_startup = true,
   },
+  statusline = {
+    theme = "vscode_colored",
+    order = { "mode", "file", "git", "%=", "lsp_msg", "%=", "diagnostics", "lsp", "cursor", "tabsize", "cwd" },
+    modules = {
+      tabsize = function()
+        return " " .. vim.bo.shiftwidth .. " "
+      end,
+    },
+  },
   -- hl_override = {
   --   Normal = {
   --     bg = "NONE",

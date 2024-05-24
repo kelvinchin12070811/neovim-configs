@@ -20,7 +20,8 @@ M.ui = {
         return " " .. vim.bo.shiftwidth .. "  "
       end,
       cursor_pos = function()
-        return "%#StText#  %l:%c  "
+
+        return "%#StText#  %l:%c %p%%  "
       end,
     },
   },

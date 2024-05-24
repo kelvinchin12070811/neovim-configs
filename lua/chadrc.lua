@@ -14,10 +14,13 @@ M.ui = {
   },
   statusline = {
     theme = "vscode_colored",
-    order = { "mode", "file", "git", "%=", "lsp_msg", "%=", "diagnostics", "lsp", "cursor", "tabsize", "cwd" },
+    order = { "mode", "file", "git", "%=", "lsp_msg", "%=", "diagnostics", "lsp", "cursor_pos", "tabsize", "cwd" },
     modules = {
       tabsize = function()
-        return " " .. vim.bo.shiftwidth .. " "
+        return " " .. vim.bo.shiftwidth .. "  "
+      end,
+      cursor_pos = function()
+        return "%#StText#  %l:%c  "
       end,
     },
   },

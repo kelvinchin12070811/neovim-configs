@@ -26,11 +26,13 @@ map("n", "<leader>bn", "<cmd>enew<CR>", { desc = "buffer new" })
 map("n", "<leader>bd", function()
   require("nvchad.tabufline").close_buffer()
 end, { desc = "buffer close" })
-map("n", "<leader>fd", "<cmd>Telescope Treesitter<CR>", { desc = "Search Symbols" })
+map("n", "<leader>fd", "<cmd>Telescope treesitter<CR>", { desc = "Search Symbols" })
 
 vim.api.nvim_set_keymap("n", "<leader>sl", "i<CR><Esc>", { noremap = true, desc = "Split line infront of cursor" })
 vim.api.nvim_set_keymap("n", "<leader>sL", "a<CR><Esc>", { noremap = true, desc = "Split lien behind of cursor" })
 vim.api.nvim_set_keymap("n", "gV", "<c-v>", { noremap = true, desc = "Block visual mode" })
+vim.api.nvim_set_keymap("n", "<leader>tn", "<cmd>Settab 2<CR>", { noremap = true, desc = "Narrow tab size (2 tab)"})
+vim.api.nvim_set_keymap("n", "<leader>tw", "<cmd>Settab 4<CR>", { noremap = true, desc = "Wide tab size (4 tab)"})
 
 for _, mode_char in pairs({ "n", "v" }) do
   for _, op_char in pairs({ "c", "d", "x" }) do

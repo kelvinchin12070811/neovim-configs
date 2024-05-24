@@ -36,6 +36,7 @@ M.ui = {
     BufferLineFill = { bf = "red" },
     NvDashAscii = { bg = "grey", fg = "white" }, 
   },
+
 }
 
 return M

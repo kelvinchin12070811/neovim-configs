@@ -52,5 +52,5 @@ function ShowTab()
   print("shiftwidth=" .. vim.bo.shiftwidth .. " tabstop=" .. vim.bo.tabstop)
 end
 
-vim.cmd "command! -nargs=1 SetTab lua SetTab(<f-args>)"
-vim.cmd "command! ShowTab lua ShowTab()"
+vim.cmd "command! -nargs=1 Settab lua SetTab(<f-args>)"
+vim.cmd "command! Showtab lua ShowTab()"

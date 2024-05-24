@@ -26,3 +26,5 @@ local powershell_options = {
 for option, value in pairs(powershell_options) do
   vim.opt[option] = value
 end
+
+vim.cmd "highlight gitsignscurrentlineblame guibg=Null guifg=#A3D4D5 cterm=italic gui=italic"

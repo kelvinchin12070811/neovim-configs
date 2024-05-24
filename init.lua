@@ -40,17 +40,17 @@ end)
 
 vim.opt.number = true
 vim.opt.relativenumber = true
+vim.opt.clipboard = ""
 
 -- Custom commands
-function SetIndent(value)
-    vim.bo.shiftwidth = tonumber(value)
-    vim.bo.tabstop = tonumber(value)
+function SetTab(value)
+  vim.bo.shiftwidth = tonumber(value)
+  vim.bo.tabstop = tonumber(value)
 end
 
-function ShowIndent()
-    print('shiftwidth=' .. vim.bo.shiftwidth .. ' tabstop=' .. vim.bo.tabstop)
+function ShowTab()
+  print("shiftwidth=" .. vim.bo.shiftwidth .. " tabstop=" .. vim.bo.tabstop)
 end
 
-vim.cmd('command! -nargs=1 SetIndent lua SetIndent(<f-args>)')
-vim.cmd('command! ShowIndent lua ShowIndent()')
-
+vim.cmd "command! -nargs=1 SetTab lua SetTab(<f-args>)"
+vim.cmd "command! ShowTab lua ShowTab()"

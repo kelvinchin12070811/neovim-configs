@@ -9,6 +9,8 @@ M.ui = {
   transparency = true,
   nvdash = {
     load_on_startup = true,
+    header = require('ascii_art'),
+    theme = 'dark'
   },
   statusline = {
     theme = "vscode_colored",
@@ -25,10 +27,15 @@ M.ui = {
   --   },
   -- }
 
-  -- hl_override = {
-  -- 	Comment = { italic = true },
-  -- 	["@comment"] = { italic = true },
-  -- },
+  hl_override = {
+    Comment = { italic = true, fg = "teal" },
+    ["@comment"] = { italic = true, fg = "teal" },
+    LineNr = { fg = "dark_purple" },
+    CursorLineNr = { fg = "baby_pink" },
+    BufferLineTabSelected = { fg = "pink" },
+    BufferLineFill = { bf = "red" },
+    NvDashAscii = { bg = "grey", fg = "white" }, 
+  },
 }
 
 return M

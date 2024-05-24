@@ -16,12 +16,17 @@ vim.cmd("nmap <Leader><Leader>s <Plug>(easymotion-s2)")
 vim.cmd("nmap <Leader><Leader>t <Plug>(easymotion-t2)")
 vim.cmd("map  <Leader><Leader>/ <Plug>(easymotion-sn)")
 vim.cmd("omap <Leader><Leader>/ <Plug>(easymotion-tn)")
+vim.cmd('noremap yy "*yy')
+vim.cmd('noremap y "*y')
+vim.cmd('noremap p "*p')
+vim.cmd('noremap P "*P')
 
 map("n", "<leader>b", "", { desc = "buffer op" })
 map("n", "<leader>bn", "<cmd>enew<CR>", { desc = "buffer new" })
 map("n", "<leader>bd", function()
   require("nvchad.tabufline").close_buffer()
 end, { desc = "buffer close" })
+map("n", "<leader>fd", "<cmd>Telescope Treesitter<CR>", { desc = "Search Symbols" })
 
 vim.api.nvim_set_keymap("n", "<leader>sl", "i<CR><Esc>", { noremap = true, desc = "Split line infront of cursor" })
 vim.api.nvim_set_keymap("n", "<leader>sL", "a<CR><Esc>", { noremap = true, desc = "Split lien behind of cursor" })
@@ -47,7 +52,7 @@ for _, mode_char in pairs({ "n", "v" }) do
     vim.api.nvim_set_keymap(
       mode_char,
       "<leader>" .. op_char,
-      op_char,
+      '"+' .. op_char,
       { noremap = true, silent = true, desc = desc .. ", but copy to clipboard too" }
     )
 

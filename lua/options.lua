@@ -31,4 +31,4 @@ end
 
 vim.cmd "highlight gitsignscurrentlineblame guibg=Null guifg=#A3D4D5 cterm=italic gui=italic"
 
-require "configs.autocmd"
+require "configs.autocmds"

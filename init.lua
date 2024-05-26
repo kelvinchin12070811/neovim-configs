@@ -42,15 +42,5 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.clipboard = ""
 
--- Custom commands
-function SetTab(value)
-  vim.bo.shiftwidth = tonumber(value)
-  vim.bo.tabstop = tonumber(value)
-end
-
-function ShowTab()
-  print("shiftwidth=" .. vim.bo.shiftwidth .. " tabstop=" .. vim.bo.tabstop)
-end
-
-vim.cmd "command! -nargs=1 Settab lua SetTab(<f-args>)"
-vim.cmd "command! Showtab lua ShowTab()"
+-- load custom commands
+require "configs.customcmds"

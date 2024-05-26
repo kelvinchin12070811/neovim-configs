@@ -13,6 +13,8 @@ vim.opt.softtabstop = 4
 vim.opt.expandtab = true
 vim.opt.colorcolumn = "110"
 vim.opt.visualbell = true
+vim.opt.spelllang = "en_gb"
+vim.opt.spell = true
 
 local powershell_options = {
   shell = vim.fn.executable "pwsh" == 1 and "pwsh" or "powershell",
@@ -28,3 +30,5 @@ for option, value in pairs(powershell_options) do
 end
 
 vim.cmd "highlight gitsignscurrentlineblame guibg=Null guifg=#A3D4D5 cterm=italic gui=italic"
+
+require "configs.autocmd"
